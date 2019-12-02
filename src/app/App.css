@@ -1,0 +1,26 @@
+.App-link {
+  color: #09d3ac;
+}
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.timeline {
+  border: 1px solid black;
+  flex: 1 1;
+}
+
+.tasks-list {
+  border: 1px solid black;
+  flex: 1 1;
+}
+
+.task-description {
+  border: 1px solid black;
+  flex: 1 1;
+}
