@@ -1,29 +1,25 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import {getTasks} from "../common/api";
+import Timeline from "./timeline/Timeline";
+import TasksList from "./tasksList/TasksList";
+import TaskCard from "./taskCard/TaskCard";
 
 const App = () => {
+  const [selectedTask, setSelectedTask] = useState(null);
+  const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    setTasks(getTasks().data);
+  }, []);
+
   return (
     <div className="main">
-      <div className="timeline">
-
-      </div>
-      <div className="tasks-list">
-        <ul>
-          <li>
-            task 1
-          </li>
-        </ul>
-      </div>
-      <div className="task-description">
-        Task Description
-      </div>
+      <Timeline task={selectedTask}/>
+      <TasksList tasks={tasks} onSelectTask={setSelectedTask}/>
+      <TaskCard task={selectedTask} onChange={setSelectedTask}/>
     </div>
   );
 };
-
-const TasksList = () => {
-
-};
-
 
 export default App;
