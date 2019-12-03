@@ -1,7 +1,7 @@
 export const MOCK_TASKS = [
   {
     id: 0,
-    date: "10/10/10",
+    date: "1999-01-01",
     checked: false,
     title: "Copy of Passport Photo",
     description: "Two passport-style photos taken within 30 days at FedEx, Walgreens, CVS, etc. Write lightly in pencil or felt pen your name and I-94 number) on back of photos (or card envelope if available).",
@@ -28,7 +28,7 @@ export const MOCK_TASKS = [
   },
   {
     id: 1,
-    date: "12/10/10",
+    date: "1999-01-01",
     checked: false,
     title: "Some Title #2",
     description: "Some description #2",
@@ -55,7 +55,7 @@ export const MOCK_TASKS = [
   },
   {
     id: 2,
-    date: "12/10/10",
+    date: "1999-01-01",
     checked: false,
     title: "Some Title #3",
     description: "Some description #3",

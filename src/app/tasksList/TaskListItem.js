@@ -9,11 +9,20 @@ const TaskListItem = (props) => {
       className="TaskListItem"
       onClick={() => props.onSelect(task)}
     >
+ 
       <input
         type="date"
         value={task.date}
-        onChange={() => {
+        onChange={(e) => {
+          e.persist();
 
+          let newTask = {
+            ...task,
+            date: e.target.value
+          };
+
+          updateTask(task.id, newTask);
+          props.onChange(newTask);
         }}
       />
       <input
