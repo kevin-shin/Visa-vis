@@ -1,3 +1,7 @@
+.TasksList {
+    flex: 1 1;
+}
+
 .TaskListItem {
     cursor: pointer;
 }

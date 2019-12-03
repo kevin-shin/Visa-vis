@@ -6,7 +6,7 @@ const TaskCard = (props) =>{
   const task = props.task;
 
   return (
-    <div>
+    <div className="TaskCard">
       {
         task ?
           <>
@@ -44,12 +44,9 @@ const TaskCard = (props) =>{
             {
               task.actionItems.map(actionItem => {
                 return (
-                  <>
-                    <a href={actionItem.link} target="_blank" rel="noopener noreferrer">
-                      {actionItem.title}
-                    </a>
-                    <br/>
-                  </>
+                  <a key={actionItem.id} href={actionItem.link} target="_blank" rel="noopener noreferrer">
+                    {actionItem.title}
+                  </a>
                 )
               })
             }
