@@ -14,10 +14,15 @@ const App = () => {
   }, []);
 
   return (
-    <div className="main">
-      <Timeline task={selectedTask}/>
-      <TasksList tasks={tasks} onSelectTask={setSelectedTask}/>
-      <TaskCard task={selectedTask} onChange={setSelectedTask}/>
+    <div className="body">
+      <div className="header">
+        Visa-vis
+      </div>
+      <div className="main">
+        <Timeline tasks={tasks} task={selectedTask}/>
+        <TasksList tasks={tasks} onSelectTask={setSelectedTask}/>
+        <TaskCard task={selectedTask} onChange={setSelectedTask}/>
+      </div>
     </div>
   );
 };

@@ -3,7 +3,18 @@ import "./styles.css";
 
 const Timeline = (props) => {
   return (
-    <div>Timeline</div>
+    <div className="Timeline">
+      <div className="time-line">
+        {
+          props.tasks.map(task => {
+              return (
+                <span key={task.id} className={`task-circle ${task === props.task ? "selected" : ""}`}/>
+              );
+            }
+          )
+        }
+      </div>
+    </div>
   )
 };
 

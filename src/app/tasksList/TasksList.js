@@ -4,7 +4,7 @@ import "./styles.css";
 
 const TasksList = (props) => {
   return (
-    <div>
+    <div className="TasksList">
       <ul>
         {
           props.tasks.map(task => {
