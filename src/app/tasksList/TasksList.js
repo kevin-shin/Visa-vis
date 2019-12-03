@@ -7,7 +7,17 @@ const TasksList = (props) => {
     <div>
       <ul>
         {
-          props.tasks.map(task => {
+          props.tasks
+          .sort( (date1,date2) => {
+            let first_date = new Date(date1.date);
+            let second_date = new Date(date2.date);
+  
+            if (first_date < second_date) return -1;
+            if (first_date > second_date) return 1;
+            return 0;
+            
+          })
+          .map( (task) => {
             return (
               <TaskListItem
                 key={task.id}
