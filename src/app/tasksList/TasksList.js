@@ -5,7 +5,7 @@ import "./styles.css";
 const TasksList = (props) => {
   return (
     <div className="TasksList">
-      <ul>
+      <ul className="tasks-list">
         {
           props.tasks
           .sort( (date1,date2) => {

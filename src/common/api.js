@@ -5,6 +5,11 @@ export const getTasks = () => {
 };
 
 export const updateTask = (id, task) => {
-  MOCK_TASKS[id] = task;
+  MOCK_TASKS.forEach((item, i) => {
+    if (item.id === task.id) {
+      MOCK_TASKS[i] = task;
+    }
+  });
+
   return {status: 200};
 };

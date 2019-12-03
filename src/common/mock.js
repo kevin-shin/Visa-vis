@@ -79,5 +79,167 @@ export const MOCK_TASKS = [
         link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
       }
     ]
+  },
+  {
+    id: 3,
+    date: "1999-01-01",
+    checked: false,
+    title: "Some Title #3",
+    description: "Some description #3",
+    notes: "",
+    subTasks: [
+      {
+        id: 0,
+        title: "Subtask #1",
+        checked: false
+      }
+    ],
+    actionItems: [
+      {
+        id: 0,
+        title: "Click for more info",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      },
+      {
+        id: 1,
+        title: "Download form",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      }
+    ]
+  },
+  {
+    id: 4,
+    date: "1999-01-01",
+    checked: false,
+    title: "Some Title #3",
+    description: "Some description #3",
+    notes: "",
+    subTasks: [
+      {
+        id: 0,
+        title: "Subtask #1",
+        checked: false
+      }
+    ],
+    actionItems: [
+      {
+        id: 0,
+        title: "Click for more info",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      },
+      {
+        id: 1,
+        title: "Download form",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      }
+    ]
+  },
+  {
+    id: 5,
+    date: "1999-01-01",
+    checked: false,
+    title: "Some Title #3",
+    description: "Some description #3",
+    notes: "",
+    subTasks: [
+      {
+        id: 0,
+        title: "Subtask #1",
+        checked: false
+      }
+    ],
+    actionItems: [
+      {
+        id: 0,
+        title: "Click for more info",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      },
+      {
+        id: 1,
+        title: "Download form",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      }
+    ]
+  },
+  {
+    id: 6,
+    date: "1999-01-01",
+    checked: false,
+    title: "Some Title #3",
+    description: "Some description #3",
+    notes: "",
+    subTasks: [
+      {
+        id: 0,
+        title: "Subtask #1",
+        checked: false
+      }
+    ],
+    actionItems: [
+      {
+        id: 0,
+        title: "Click for more info",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      },
+      {
+        id: 1,
+        title: "Download form",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      }
+    ]
+  },
+  {
+    id: 7,
+    date: "1999-01-01",
+    checked: false,
+    title: "Some Title #3",
+    description: "Some description #3",
+    notes: "",
+    subTasks: [
+      {
+        id: 0,
+        title: "Subtask #1",
+        checked: false
+      }
+    ],
+    actionItems: [
+      {
+        id: 0,
+        title: "Click for more info",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      },
+      {
+        id: 1,
+        title: "Download form",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      }
+    ]
+  },
+  {
+    id: 8,
+    date: "1999-01-01",
+    checked: false,
+    title: "Some Title #3",
+    description: "Some description #3",
+    notes: "",
+    subTasks: [
+      {
+        id: 0,
+        title: "Subtask #1",
+        checked: false
+      }
+    ],
+    actionItems: [
+      {
+        id: 0,
+        title: "Click for more info",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      },
+      {
+        id: 1,
+        title: "Download form",
+        link: "https://www.thesitewizard.com/html-tutorial/open-links-in-new-window-or-tab.shtml"
+      }
+    ]
   }
 ];

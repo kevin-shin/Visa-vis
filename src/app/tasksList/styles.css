@@ -1,7 +1,29 @@
 .TasksList {
-    flex: 1 1;
+  flex: 1 1 20%;
+  border: solid #ccc;
+  border-width: 0 1px 1px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 #ccc;
+  background: white;
+  margin: 10px;
+  padding: 20px;
 }
 
 .TaskListItem {
-    cursor: pointer;
+  cursor: pointer;
+  padding: 20px;
+  background: #eee;
+  border: solid #ccc;
+  border-width: 0 1px 1px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 #ccc;
+  margin-bottom: 5px;
+}
+
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  max-height: 560px;
 }
