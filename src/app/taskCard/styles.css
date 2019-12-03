@@ -1,3 +1,52 @@
 .TaskCard {
     flex: 1 1;
+    margin: 10px;
+    border: solid #ccc;
+    border-width: 0 1px 1px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 #ccc;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.no-card-instruction {
+    margin: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.task-title {
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.task-description {
+    line-height: 25px;
+}
+
+.action-item {
+    text-decoration: none;
+    color: black;
+}
+
+.button-ghost {
+    background: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 8px 15px;
+    user-select: none;
+}
+
+.button-ghost:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.SubTasksList {
+    margin-top: 10px
 }

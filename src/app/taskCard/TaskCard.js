@@ -1,6 +1,7 @@
-import {updateTask} from "../../common/api";
 import React from "react";
 import "./styles.css";
+import SubTasksList from "./SubTaskList";
+import TaskNotes from "./TaskNotes";
 
 const TaskCard = (props) =>{
   const task = props.task;
@@ -10,63 +11,30 @@ const TaskCard = (props) =>{
       {
         task ?
           <>
-            <div>{task.title}</div>
-            <div>{task.description}</div>
-            <ul>
-              {
-                task.subTasks.map((subTask, i) => {
-                  return (
-                    <li key={subTask.id}>
-                      <input
-                        type="checkbox"
-                        checked={subTask.checked}
-                        onChange={(e) => {
-                          e.persist();
-
-                          let newSubTask = {
-                            ...subTask,
-                            checked: e.target.checked
-                          };
-
-                          let newTask = {...task};
-
-                          newTask.subTasks[i] = newSubTask;
-
-                          updateTask(task.id, newTask);
-                          props.onChange(newTask);
-                        }}/>
-                      {subTask.title}
-                    </li>
-                  );
-                })
-              }
-            </ul>
+            <div className="task-title">{task.title}</div>
+            <div className="task-description">{task.description}</div>
+            <SubTasksList task={task} onChange={props.onChange}/>
             {
               task.actionItems.map(actionItem => {
                 return (
-                  <a key={actionItem.id} href={actionItem.link} target="_blank" rel="noopener noreferrer">
+                  <a
+                    key={actionItem.id}
+                    className="button-ghost action-item"
+                    href={actionItem.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {actionItem.title}
                   </a>
                 )
               })
             }
-            <br/>
-            <textarea
-              value={task.notes}
-              onChange={(e) => {
-                e.persist();
-
-                let newTask = {
-                  ...task,
-                  notes: e.target.value
-                };
-
-                updateTask(task.id, newTask);
-                props.onChange(newTask);
-              }}/>
+            <TaskNotes task={task} onChange={props.onChange}/>
           </>
           :
-          "Select a task on the left"
+          <div className="no-card-instruction">
+            Select a task on the left to see details here
+          </div>
       }
     </div>
   );
