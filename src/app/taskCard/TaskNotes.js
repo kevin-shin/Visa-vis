@@ -6,7 +6,7 @@ const TaskNotes = (props) => {
 
   return (
     <div className="TaskNotes">
-      <span className="task-notes-title">Notes:</span>
+      <p className="task-notes-title">Notes:</p>
       <textarea
         value={task.notes}
         onChange={(e) => {

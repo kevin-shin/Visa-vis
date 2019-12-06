@@ -9,40 +9,43 @@ const TaskListItem = (props) => {
       className="TaskListItem"
       onClick={() => props.onSelect(task)}
     >
- 
-      <input
-        type="date"
-        value={task.date}
-        onChange={(e) => {
-          e.persist();
+      <div>
+        <input
+          type="date"
+          value={task.date}
+          onChange={(e) => {
+            e.persist();
 
-          let newTask = {
-            ...task,
-            date: e.target.value
-          };
+            let newTask = {
+              ...task,
+              date: e.target.value
+            };
 
-          updateTask(task.id, newTask);
-          props.onChange(newTask);
-        }}
-      />
-      <input
-        type="checkbox"
-        checked={task.checked}
-        onChange={(e) => {
-          e.persist();
+            updateTask(task.id, newTask);
+            props.onChange(newTask);
+          }}
+        />
+        <span className="task-li-title">
+          {props.task.title}
+        </span>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          checked={task.checked}
+          onChange={(e) => {
+            e.persist();
 
-          let newTask = {
-            ...task,
-            checked: e.target.checked
-          };
+            let newTask = {
+              ...task,
+              checked: e.target.checked
+            };
 
-          updateTask(task.id, newTask);
-          props.onChange(newTask);
-        }}
-      />
-      <span className="task-li-title">
-        {props.task.title}
-      </span>
+            updateTask(task.id, newTask);
+            props.onChange(newTask);
+          }}
+        />
+        </div>
     </li>
   )
 };

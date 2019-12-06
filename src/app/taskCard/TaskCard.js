@@ -14,21 +14,22 @@ const TaskCard = (props) =>{
             <div className="task-title">{task.title}</div>
             <div className="task-description">{task.description}</div>
             <SubTasksList task={task} onChange={props.onChange}/>
-            {
-              task.actionItems.map(actionItem => {
-                return (
-                  <a
-                    key={actionItem.id}
-                    className="button-ghost action-item"
-                    href={actionItem.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {actionItem.title}
-                  </a>
-                )
-              })
-            }
+            <div className="buttonHolder">{
+                task.actionItems.map(actionItem => {
+                  return (
+                    <a
+                      key={actionItem.id}
+                      className="button-ghost action-item"
+                      href={actionItem.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {actionItem.title}
+                    </a>
+                  )
+                })
+              }
+            </div>
             <TaskNotes task={task} onChange={props.onChange}/>
           </>
           :

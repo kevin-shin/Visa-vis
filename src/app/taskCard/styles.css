@@ -50,3 +50,17 @@
 .SubTasksList {
     margin-top: 10px
 }
+
+.SubTasksList > ul {
+    list-style-type: none;
+}
+
+
+.TaskNotes {
+    float: left;
+}
+
+.buttonHolder {
+    display: flex;
+    justify-content: space-around;
+}
