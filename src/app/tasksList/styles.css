@@ -18,12 +18,12 @@
   border-radius: 5px;
   box-shadow: 0 1px 1px 0 #ccc;
   margin-bottom: 5px;
-  justify-content: space-between;
   flex-direction: row;
 }
 
-.TaskListItem > li {
-  display: inline-block;
+.task-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .tasks-list {
@@ -32,4 +32,8 @@
   margin: 0;
   overflow: auto;
   /* max-height: 560px; */
+}
+
+.task-li-title {
+  padding-left: 10px;
 }
