@@ -10,7 +10,7 @@
     flex-direction: column;
     padding: 40px;
     overflow: auto;
-    min-width: 700px;
+    min-width: 600px;
 }
 
 .no-card-instruction {
