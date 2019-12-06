@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: column;
     padding: 40px;
+    overflow: auto;
+    min-width: 700px;
 }
 
 .no-card-instruction {
@@ -63,4 +65,11 @@
 .buttonHolder {
     display: flex;
     justify-content: space-around;
+}
+
+
+textarea {
+    width: 100%;
+    min-width: 100px;
+    min-height: 200px;
 }

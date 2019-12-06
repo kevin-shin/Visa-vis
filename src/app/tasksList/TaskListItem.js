@@ -3,7 +3,7 @@ import React from "react";
 
 const TaskListItem = (props) => {
   const task = props.task;
-
+  
   return (
     <li
       className="TaskListItem"
@@ -34,6 +34,7 @@ const TaskListItem = (props) => {
           <input
             type="checkbox"
             checked={task.checked}
+            id={props.task.id}
             onChange={(e) => {
               e.persist();
 
@@ -46,6 +47,8 @@ const TaskListItem = (props) => {
               props.onChange(newTask);
             }}
           />
+          {task.checked === false && <label htmlFor={props.task.id}>Mark as Completed</label>}
+          {task.checked === true && <label htmlFor={props.task.id}>Completed</label>}
         </div>
       </div>
     </li>

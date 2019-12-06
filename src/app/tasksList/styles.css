@@ -22,6 +22,7 @@
   box-shadow: 0 1px 1px 0 #ccc;
   margin-bottom: 5px;
   flex-direction: row;
+  list-style-type: none;
 }
 
 .task-item {
@@ -44,4 +45,21 @@
 .task-list-header,
 .task-list-footer {
   flex-shrink: 0;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"]:checked + label {
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+
 }
