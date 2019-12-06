@@ -7,6 +7,9 @@
   background: white;
   margin: 10px;
   padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .TaskListItem {
@@ -31,5 +34,9 @@
   padding: 0;
   margin: 0;
   overflow: auto;
-  /* max-height: 560px; */
+}
+
+.task-list-header,
+.task-list-footer {
+  flex-shrink: 0;
 }

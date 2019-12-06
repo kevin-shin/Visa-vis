@@ -23,6 +23,7 @@
     align-items: center;
     font-size: 2em;
     background-color: lightskyblue;
+    height: 10%;
 }
 
 .main {
@@ -32,4 +33,5 @@
     align-items: stretch;
     width: 80%;
     margin: 100px;
+    height: 90%;
 }
