@@ -9,6 +9,7 @@
     padding: 0;
     background: #f1f1f1;
     overflow: auto;
+    font-family: Helvetica;
 }
 
 * {
@@ -21,8 +22,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    background-color: lightskyblue;
+    font-size: 3em;
+    font-family: Helvetica;
+    color: white;
+    background-color: #25274D;
     height: 10%;
 }
 

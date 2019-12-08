@@ -20,13 +20,13 @@
 .task-circle {
     width: 10px;
     height: 10px;
-    background: dodgerblue;
+    background: #29648A;
     border-radius: 50%;
 }
 
 .task-circle.selected {
     width: 30px;
     height: 30px;
-    background: dodgerblue;
+    background: #29648A;
     border-radius: 50%;
 }
