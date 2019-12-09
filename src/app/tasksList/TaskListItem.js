@@ -33,6 +33,7 @@ const TaskListItem = (props) => {
         <div>
           <input
             type="checkbox"
+            className="checkboxTaskListItem"
             checked={task.checked}
             id={props.task.id}
             onChange={(e) => {
@@ -47,8 +48,8 @@ const TaskListItem = (props) => {
               props.onChange(newTask);
             }}
           />
-          {task.checked === false && <label htmlFor={props.task.id}>Mark as Completed</label>}
-          {task.checked === true && <label htmlFor={props.task.id}>Completed</label>}
+          {task.checked === false && <label className="uncompleted" htmlFor={props.task.id}>To Do</label>}
+          {task.checked === true && <label className="completed" htmlFor={props.task.id}>Completed</label>}
         </div>
       </div>
     </li>

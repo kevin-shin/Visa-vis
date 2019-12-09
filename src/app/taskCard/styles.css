@@ -37,16 +37,18 @@
 }
 
 .button-ghost {
-  background: none;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  padding: 8px 15px;
-  user-select: none;
+    background: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 15px 20px;
+    user-select: none;
+    background-color: #464866;
+    color: white;
 }
 
 .button-ghost:hover {
-  background: #f5f5f5;
-  cursor: pointer;
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .SubTasksList {
@@ -66,6 +68,7 @@
   display: flex;
   justify-content: space-around;
 }
+
 
 textarea {
   width: 100%;
