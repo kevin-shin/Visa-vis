@@ -28,7 +28,7 @@
 
 .task-item {
   display: flex;
-  flex: row;
+  flex-direction: row;
   justify-content: space-between;
 }
 
