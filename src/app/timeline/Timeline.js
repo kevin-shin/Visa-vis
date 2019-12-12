@@ -8,7 +8,7 @@ const Timeline = (props) => {
         {
           props.tasks.map(task => {
               return (
-                <span key={task.id} className={`task-circle ${task === props.task ? "selected" : ""}`}/>
+                <span key={task.id} className={`task-circle ${task === props.selectedTask ? "selected" : ""}`}/>
               );
             }
           )

@@ -4,7 +4,7 @@ import SubTasksList from "./SubTaskList";
 import TaskNotes from "./TaskNotes";
 
 const TaskCard = (props) =>{
-  const task = props.task;
+  const task = props.selectedTask;
 
   return (
     <div className="TaskCard">

@@ -25,6 +25,7 @@ const TasksList = (props) => {
                 task={task}
                 onSelect={props.onSelectTask}
                 onChange={props.onSelectTask}
+                className={`${task === props.selectedTask ? "selected" : ""}`}
               />
             );
           })

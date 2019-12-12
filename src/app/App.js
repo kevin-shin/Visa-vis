@@ -19,9 +19,9 @@ const App = () => {
         Visa-vis
       </div>
       <div className="main">
-        <TaskCard task={selectedTask} onChange={setSelectedTask}/>
-        <TasksList tasks={tasks} onSelectTask={setSelectedTask}/>
-        <Timeline tasks={tasks} task={selectedTask}/>
+        <TaskCard selectedTask={selectedTask} onChange={setSelectedTask}/>
+        <TasksList selectedTask={selectedTask} tasks={tasks} onSelectTask={setSelectedTask} />
+        <Timeline selectedTask={selectedTask} tasks={tasks} />
       </div>
     </div>
   );

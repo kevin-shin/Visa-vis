@@ -6,11 +6,17 @@ const TaskListItem = (props) => {
   
   return (
     <li
-      className="TaskListItem"
-      onClick={() => props.onSelect(task)}
+      className={`TaskListItem ${props.className} ${task.checked ? "complete" : ""}`}
+      onClick={(e) => {
+        e.persist();
+
+        if (!e.target.classList.contains("task-li-btn")) {
+          props.onSelect(task)
+        }
+      }}
     >
       <div className="task-item">
-        <div>
+        <div className="task-li-content">
           <input
             type="date"
             value={task.date}
@@ -30,27 +36,18 @@ const TaskListItem = (props) => {
             {props.task.title}
           </span>
         </div>
-        <div>
-          <input
-            type="checkbox"
-            className="checkboxTaskListItem"
-            checked={task.checked}
-            id={props.task.id}
-            onChange={(e) => {
-              e.persist();
+        <button
+          className={`task-li-btn ${task.checked ? "checked" : ""}`}
+          onClick={() => {
+            let newTask = {
+              ...task,
+              checked: !task.checked
+            };
 
-              let newTask = {
-                ...task,
-                checked: e.target.checked
-              };
-
-              updateTask(task.id, newTask);
-              props.onChange(newTask);
-            }}
-          />
-          {task.checked === false && <label className="uncompleted" htmlFor={props.task.id}>To Do</label>}
-          {task.checked === true && <label className="completed" htmlFor={props.task.id}>Completed</label>}
-        </div>
+            updateTask(task.id, newTask);
+            props.onChange(newTask);
+          }}
+        />
       </div>
     </li>
   )

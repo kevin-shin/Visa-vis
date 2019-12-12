@@ -16,7 +16,7 @@
 .TaskListItem {
   cursor: pointer;
   padding: 20px;
-  background: #eee;
+  background: #aaddfa;
   border: solid #ccc;
   border-width: 0 1px 1px 0;
   border-radius: 5px;
@@ -26,10 +26,27 @@
   list-style-type: none;
 }
 
+.TaskListItem.selected {
+  background: #2e9cca;
+}
+
+.TaskListItem.complete {
+  background-color: #eee;
+}
+
+.TaskListItem.complete.selected {
+  background-color: #ddd;
+}
+
+.TaskListItem.complete .task-li-content {
+  opacity: 0.2;
+}
+
 .task-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .tasks-list {
@@ -48,29 +65,40 @@
   flex-shrink: 0;
 }
 
-input[type="checkbox"] + label {
-  display: inline-block;
-  padding: 10px;
-  cursor: pointer;
-  border: 1px solid #464866 ;
-  color: black;
-  background-color: white;
-  border-radius: 10px;
-}
-
-input[type="checkbox"]:checked + label {
+.task-li-btn.checked {
   color: white;
+  width: 100px;
   background-color: #464866;
+  font-size: 0.8em;
+}
+
+.task-li-btn.checked::after {
+  content: "Complete";
+  width: 1em;
+  height: 1em;
+  margin-right: 0.3em;
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.task-li-btn {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 0.4em;
+  border: 1px solid #464866 ;
+  background-color: #f5f5f5;
   border-radius: 10px;
-  border: 0px;
-  padding: 10px;
-
 }
 
-.checkboxTaskListItem {
-  display: none;
+.task-li-btn:hover:not(.checked) {
+  transition: width 0.3s, height 0.3s, font-size 0.05s 0.1s;
+  width: 100px;
+  height: 50px;
+  font-size: 0.8em;
 }
 
-.uncompleted {
-  background-color: white;
+.task-li-btn:hover:not(.checked)::after {
+  content: "Mark as Complete";
+  color: limegreen;
 }

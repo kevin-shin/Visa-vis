@@ -11,6 +11,7 @@
   padding: 40px;
   overflow: auto;
   min-width: 600px;
+  height: 100%;
 }
 
 .no-card-instruction {
