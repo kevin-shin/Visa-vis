@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export const MOCK_TASKS = [
   {
     id: 0,
@@ -222,7 +224,7 @@ export const MOCK_TASKS = [
   },
   {
     id: 8,
-    date: "2020-05-05",
+    date: "2020-07-05",
     checked: false,
     title: "I-20",
     description: "ISP will print new I-20 for you to submit with your Form I-765",
@@ -252,3 +254,5 @@ export const MOCK_TASKS = [
     ]
   }
 ];
+
+export const END_DATE = "2020-08-01";

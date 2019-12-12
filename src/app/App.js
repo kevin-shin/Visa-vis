@@ -21,7 +21,7 @@ const App = () => {
       <div className="main">
         <TaskCard selectedTask={selectedTask} onChange={setSelectedTask}/>
         <TasksList selectedTask={selectedTask} tasks={tasks} onSelectTask={setSelectedTask} />
-        <Timeline selectedTask={selectedTask} tasks={tasks} />
+        <Timeline selectedTask={selectedTask} tasks={tasks} onSelectTask={setSelectedTask} />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: flex-end;
   margin-right: 50px;
+  position: relative;
 }
 
 .time-line {
@@ -13,16 +14,20 @@
   border: 1px solid gray;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  height: 100%;
+  position: relative;
 }
 
 .task-circle {
+  position: absolute;
   width: 10px;
   height: 10px;
   background: #aaddfa;
   border-radius: 50%;
   border: 1px solid #29648A;
+  cursor: pointer;
+  transform: translateY(-50%);
 }
 
 .task-circle.selected {
@@ -31,3 +36,14 @@
   background: #2e9cca;
   border-radius: 50%;
 }
+
+.start-date-label {
+  top: 0;
+  font-size: 0.8em;
+}
+
+.end-date-label {
+  font-size: 0.8em;
+  bottom: 0;
+}
+

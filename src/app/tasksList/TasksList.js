@@ -5,7 +5,7 @@ import "./styles.css";
 const TasksList = (props) => {
   return (
     <div className="TasksList">
-        <div className="task-list-header"></div>
+      <div className="task-list-header"/>
       <ul className="tasks-list">
         {
           props.tasks
@@ -31,7 +31,7 @@ const TasksList = (props) => {
           })
         }
       </ul>
-        <div className="task-list-footer"></div>
+      <div className="task-list-footer"/>
     </div>
   );
 };

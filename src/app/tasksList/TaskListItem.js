@@ -1,9 +1,12 @@
 import { updateTask } from "../../common/api";
 import React from "react";
+import moment from "moment";
+import {END_DATE} from "../../common/mock";
 
 const TaskListItem = (props) => {
   const task = props.task;
-  
+  const endDate = moment(END_DATE);
+
   return (
     <li
       className={`TaskListItem ${props.className} ${task.checked ? "complete" : ""}`}
@@ -19,6 +22,8 @@ const TaskListItem = (props) => {
         <div className="task-li-content">
           <input
             type="date"
+            min={moment().format("YYYY-MM-DD")}
+            max={endDate.format("YYYY-MM-DD")}
             value={task.date}
             onChange={(e) => {
               e.persist();
