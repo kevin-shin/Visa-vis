@@ -13,6 +13,7 @@ const SubTasksList = (props) => {
             return (
               <li key={subTask.id}>
                 <input
+                  className="subtask-li"
                   type="checkbox"
                   checked={subTask.checked}
                   onChange={(e) => {
@@ -30,7 +31,7 @@ const SubTasksList = (props) => {
                     updateTask(task.id, newTask);
                     props.onChange(newTask);
                   }}/>
-                {subTask.title}
+                {"    " + subTask.title}
               </li>
             );
           })

@@ -2,10 +2,25 @@ import { updateTask } from "../../common/api";
 import React from "react";
 import moment from "moment";
 import {END_DATE} from "../../common/mock";
+import { ThemeProvider } from "styled-components";
+import { CalendarIcon } from "react-calendar-icon";
 
 const TaskListItem = (props) => {
   const task = props.task;
   const endDate = moment(END_DATE);
+
+  const theme = {
+    calendarIcon: {
+      textColor: "white",
+      primaryColor: "#25274D",
+      backgroundColor: "#fafafa"
+    }
+  };
+
+  const dateOptions = {
+    header: { month: "long" },
+    value: { day: "2-digit" },
+  };
 
   return (
     <li
@@ -20,7 +35,12 @@ const TaskListItem = (props) => {
     >
       <div className="task-item">
         <div className="task-li-content">
+          <label className="task-label">
+            <ThemeProvider theme={theme}>
+              <CalendarIcon date={new Date(task.date)} options={dateOptions}/>
+            </ThemeProvider>
           <input
+            className="date-input"
             type="date"
             min={moment().format("YYYY-MM-DD")}
             max={endDate.format("YYYY-MM-DD")}
@@ -37,6 +57,7 @@ const TaskListItem = (props) => {
               props.onChange(newTask);
             }}
           />
+          </label>
           <span className="task-li-title">
             {props.task.title}
           </span>

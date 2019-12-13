@@ -15,7 +15,7 @@
 
 .TaskListItem {
   cursor: pointer;
-  padding: 20px;
+  padding: 15px 20px;
   background: #aaddfa;
   border: solid #ccc;
   border-width: 0 1px 1px 0;
@@ -100,5 +100,33 @@
 
 .task-li-btn:hover:not(.checked)::after {
   content: "Mark as Complete";
-  color: limegreen;
+  color: #29648A;
+  font-weight: bold;
+}
+
+.date-input {
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  border: none;
+  width: 0;
+}
+
+.task-li-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-label {
+  height: 70px;
+}
+
+.sc-htpNat {
+  height: 0;
+}
+
+.sc-bdVaJa {
+  height: 100%;
 }
