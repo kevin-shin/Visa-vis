@@ -10,6 +10,7 @@ const TaskNotes = (props) => {
       <textarea
         className="task-notes"
         value={task.notes}
+        className="task-notes"
         onChange={(e) => {
           e.persist();
 
