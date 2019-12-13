@@ -1,11 +1,29 @@
 import { updateTask } from "../../common/api";
 import React from "react";
 import moment from "moment";
-import {END_DATE} from "../../common/mock";
+import { CalendarIcon } from "react-calendar-icon";
+import { END_DATE } from "../../common/mock";
+import DatePicker from "react-datepicker";
+import { ThemeProvider } from "styled-components";
+import 'react-datepicker/dist/react-datepicker.css';
+
+const theme = {
+  calendarIcon: {
+    textColor: "white", 
+    primaryColor: "#25274D", 
+    backgroundColor: "#fafafa"
+  }
+};
+
+const dateOptions = {
+  header: { month: "long" },
+  value: { day: "2-digit" }
+};
 
 const TaskListItem = (props) => {
   const task = props.task;
   const endDate = moment(END_DATE);
+  let [date, setStartDate] = React.useState(new Date(task.date));
 
   return (
     <li
@@ -20,26 +38,30 @@ const TaskListItem = (props) => {
     >
       <div className="task-item">
         <div className="task-li-content">
-          <input
-            type="date"
-            min={moment().format("YYYY-MM-DD")}
-            max={endDate.format("YYYY-MM-DD")}
-            value={task.date}
-            onChange={(e) => {
-              e.persist();
+          <label>
+            <ThemeProvider theme={theme}>
+              <CalendarIcon date={date} options={dateOptions}/>
+            </ThemeProvider>
+            <DatePicker
+              className="date-input"
+              id={"datePicker" + task.id}
+              selected={date}
+              onChange={(date) => {
+                setStartDate(date);
+                let newTask = {
+                  ...task,
+                  date: date
+                }
+                updateTask(task.id, newTask);
+                props.onChang(newTask);
+              }}
+              onSelect={
+                console.log("HIT HERE")
+              }
 
-              let newTask = {
-                ...task,
-                date: e.target.value
-              };
-
-              updateTask(task.id, newTask);
-              props.onChange(newTask);
-            }}
-          />
-          <span className="task-li-title">
-            {props.task.title}
-          </span>
+            />
+          </label>
+          <span className="task-li-title">{props.task.title}</span>
         </div>
         <button
           className={`task-li-btn ${task.checked ? "checked" : ""}`}

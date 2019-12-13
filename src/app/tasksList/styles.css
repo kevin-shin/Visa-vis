@@ -57,7 +57,8 @@
 }
 
 .task-li-title {
-  padding-left: 10px;
+  padding-left: 20px;
+  font-size: 18px;
 }
 
 .task-list-header,
@@ -100,5 +101,25 @@
 
 .task-li-btn:hover:not(.checked)::after {
   content: "Mark as Complete";
-  color: limegreen;
+  color: #29648A;
+  font-weight: bold;
+}
+
+.date-input {
+  display: none;
+}
+
+.task-li-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sc-htpNat {
+  height: 0px;
+}
+
+.sc-bdVaJa {
+  height: 100%;
 }
