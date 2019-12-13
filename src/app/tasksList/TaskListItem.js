@@ -38,7 +38,7 @@ const TaskListItem = (props) => {
     >
       <div className="task-item">
         <div className="task-li-content">
-          <label>
+          <label className="task-label">
             <ThemeProvider theme={theme}>
               <CalendarIcon date={date} options={dateOptions}/>
             </ThemeProvider>

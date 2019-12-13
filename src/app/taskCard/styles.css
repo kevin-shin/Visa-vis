@@ -69,6 +69,9 @@
   justify-content: space-around;
 }
 
+.task-notes {
+  font-size: 16px;
+}
 
 textarea {
   width: 100%;

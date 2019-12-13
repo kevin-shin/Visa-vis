@@ -15,7 +15,7 @@
 
 .TaskListItem {
   cursor: pointer;
-  padding: 20px;
+  padding: 15px 20px 15px 20px;
   background: #aaddfa;
   border: solid #ccc;
   border-width: 0 1px 1px 0;
@@ -122,4 +122,8 @@
 
 .sc-bdVaJa {
   height: 100%;
+}
+
+.task-label {
+  height: 70px;
 }
