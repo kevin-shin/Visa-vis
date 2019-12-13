@@ -33,4 +33,5 @@
   align-items: stretch;
   width: 80%;
   max-height: 80%;
+  overflow-x: auto;
 }

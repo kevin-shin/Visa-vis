@@ -53,11 +53,8 @@ const TaskListItem = (props) => {
                   date: date
                 }
                 updateTask(task.id, newTask);
-                props.onChang(newTask);
+                props.onChange(newTask);
               }}
-              onSelect={
-                console.log("HIT HERE")
-              }
 
             />
           </label>
