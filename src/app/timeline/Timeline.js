@@ -9,7 +9,7 @@ const Timeline = (props) => {
 
   return (
     <div className="Timeline">
-      <span className="start-date-label task-circle">Today</span>
+      <span className="start-date-label"></span>
       <div className="time-line">
         {
           props.tasks.map(task => {
@@ -29,7 +29,7 @@ const Timeline = (props) => {
           )
         }
       </div>
-      <span className="end-date-label task-circle">{endDate.format('LL')}</span>
+      <span className="end-date-label"></span>
     </div>
   )
 };

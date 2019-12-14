@@ -35,15 +35,23 @@
   height: 30px;
   background: #2e9cca;
   border-radius: 50%;
+  z-index: 100;
 }
 
 .start-date-label {
   top: 0;
-  font-size: 0.8em;
+  background: black;
+  border: 0px;
+  width: 12px;
+  height: 3px;
 }
 
 .end-date-label {
-  font-size: 0.8em;
   bottom: 0;
+  background: black;
+  border: 0px;
+  border: 0px;
+  width: 12px;
+  height: 3px;
 }
 

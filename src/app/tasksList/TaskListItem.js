@@ -8,7 +8,8 @@ import { CalendarIcon } from "react-calendar-icon";
 const TaskListItem = (props) => {
   const task = props.task;
   const endDate = moment(END_DATE);
-
+  var iconDate = new Date(task.date);
+  iconDate.setDate(iconDate.getDate() + 1);
   const theme = {
     calendarIcon: {
       textColor: "white",
@@ -37,7 +38,7 @@ const TaskListItem = (props) => {
         <div className="task-li-content">
           <label className="task-label" htmlFor={`date-input${task.id}`}>
             <ThemeProvider theme={theme}>
-              <CalendarIcon date={new Date(task.date)} options={dateOptions}/>
+              <CalendarIcon date={iconDate} options={dateOptions}/>
             </ThemeProvider>
             <input
               className="date-input"

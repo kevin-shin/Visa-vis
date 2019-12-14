@@ -4,10 +4,14 @@ import {getTasks} from "../common/api";
 import Timeline from "./timeline/Timeline";
 import TasksList from "./tasksList/TasksList";
 import TaskCard from "./taskCard/TaskCard";
+import {END_DATE} from "../common/mock";
+import moment from "moment";
+
 
 const App = () => {
   const [selectedTask, setSelectedTask] = useState(null);
   const [tasks, setTasks] = useState([]);
+  const endDate = moment(END_DATE);
 
   useEffect(() => {
     setTasks(getTasks().data);
@@ -22,6 +26,14 @@ const App = () => {
         <TaskCard selectedTask={selectedTask} onChange={setSelectedTask}/>
         <TasksList selectedTask={selectedTask} tasks={tasks} onSelectTask={setSelectedTask} />
         <Timeline selectedTask={selectedTask} tasks={tasks} onSelectTask={setSelectedTask} />
+        <div className="timeline-label">
+          <div className="timeline-dates">
+            TODAY
+          </div>
+          <div className="timeline-dates">
+            {endDate.format('LL')}
+          </div>
+      </div>
       </div>
     </div>
   );

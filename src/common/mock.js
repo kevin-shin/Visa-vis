@@ -6,12 +6,12 @@ export const MOCK_TASKS = [
     date: "2020-03-15",
     checked: false,
     title: "Copy of passport photo page",
-    description: "Two passport-style photos taken within 30 days at FedEx, Walgreens, CVS, etc. Write lightly in pencil or felt pen your name and I-94 number) on back of photos (or card envelope if available).",
+    description: "Two passport-style photos taken within 30 days at FedEx, Walgreens, CVS, etc. Write your name and I-94 lightly in pencil or felt pen on the back of the photos (or card envelope if available).",
     notes: "",
     subTasks: [
       {
         id: 0,
-        title: "Bring pen/pencil to write information on photos",
+        title: "Bring a pen or pencil to write information on photos",
         checked: false
       }
     ],
@@ -19,12 +19,12 @@ export const MOCK_TASKS = [
       {
         id: 0,
         title: "Click for more info",
-        link: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.htm"
+        link: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html"
       },
       {
         id: 1,
         title: "Example photos",
-        link: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.htm"
+        link: "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html"
       }
     ]
   },
@@ -33,7 +33,7 @@ export const MOCK_TASKS = [
     date: "2020-04-01",
     checked: false,
     title: "OPT application supplement",
-    description: "You must complete this form BEFORE your appointment with an ISP staff member to review your OPT or OPT STEM (after you complete 12-month OPT) application and to issue a new I-20 to include with your application.",
+    description: "Macalester requires you to complete this form BEFORE your appointment with an ISP staff member to review your OPT or OPT STEM (after you complete 12-month OPT) application in order to issue a new I-20 to include with your application.",
     notes: "Your OPT or OPT STEM application must be received by USCIS within 30 days of I-20 issuance; the consequence for not doing so is rejection of your OPT or OPT STEM application.",
     subTasks: [
       {
@@ -50,7 +50,7 @@ export const MOCK_TASKS = [
       },
       {
         id: 1,
-        title: "Access the form",
+        title: "Show me the form",
         link: "https://docs.google.com/forms/d/e/1FAIpQLScxOI4jI86El6_QKMqZqqdB7NeA0O8yWEd4C_vo0kDTiw-3RQ/viewform"
       }
     ]
@@ -60,8 +60,8 @@ export const MOCK_TASKS = [
     date: "2020-04-07",
     checked: false,
     title: "Check/Money order",
-    description: "Check or money order for $410 made out to the Department of Homeland Security.",
-    notes: "Payment with a valid credit card is possible with Form G-1450 Authorization for Credit Card Transactions",
+    description: "Check or money order made out to the Department of Homeland Security. The application fee is $410. Payment with a valid credit card is possible with Form G-1450 Authorization for Credit Card Transactions.",
+    notes: "",
     subTasks: [
       {
         id: 0,
@@ -82,7 +82,7 @@ export const MOCK_TASKS = [
       },
       {
         id: 2,
-        title: "How to pay with credit card",
+        title: "Pay with credit card",
         link: "https://www.uscis.gov/forms/fingerprints/pay-a-credit-card"
       }
     ]
@@ -92,8 +92,8 @@ export const MOCK_TASKS = [
     date: "2020-04-10",
     checked: false,
     title: "Form G-1145",
-    description: "Filling out this form is optional but recommended, and you will receive a text message or email when USCIS receives your application.",
-    notes: "Use this form to request a text message or email when USCIS receives your application",
+    description: "Form F-1145 is submitted to request USCIS sends you a text message or email when they have received your application. Filling out this form is *optional* but recommended by ISP.",
+    notes: "",
     subTasks: [
       {
         id: 0,
@@ -119,7 +119,7 @@ export const MOCK_TASKS = [
     date: "2020-04-15",
     checked: false,
     title: "Form I-765",
-    description: "Certain aliens who are in the United States may file Form I-765, Application for Employment Authorization, to request employment authorization and an Employment Authorization Document (EAD).  Other aliens whose immigration status authorizes them to work in the United States without restrictions may also use Form I-765 to apply to U.S. Citizenship and Immigration Services (USCIS) for an EAD that shows such authorization.",
+    description: "Form I-765 is the actual form to apply for work authorization to USCIS. All pages must be submitted, even when blank. Follow the directions below, provided by ISP on best practices to fill out this form.",
     notes: "",
     subTasks: [
       {
@@ -157,7 +157,7 @@ export const MOCK_TASKS = [
     checked: false,
     title: "Copy of F-1 visa page",
     description: "Copy of F-1 visa page typically found in your passport.",
-    notes: "Should be clear and easy to read",
+    notes: "",
     subTasks: [
       {
         id: 0,
@@ -195,7 +195,7 @@ export const MOCK_TASKS = [
       },
       {
         id: 1,
-        title: "Download form",
+        title: "DHS I-94 Portal",
         link: "https://i94.cbp.dhs.gov/I94/#/home"
       }
     ]
@@ -205,7 +205,7 @@ export const MOCK_TASKS = [
     date: "2020-04-30",
     checked: false,
     title: "[ISP] CPT history",
-    description: "ISP will print your CPT history if applicable",
+    description: "ISP will print your CPT history (if applicable). The",
     notes: "",
     subTasks: [
       {
@@ -226,8 +226,8 @@ export const MOCK_TASKS = [
     id: 8,
     date: "2020-07-05",
     checked: false,
-    title: "I-20",
-    description: "ISP will print new I-20 for you to submit with your Form I-765",
+    title: "[ISP] I-20",
+    description: "ISP will print a new I-20 for you to submit with your Form I-765.",
     notes: "Complete OPT application must be received by USCIS within 30 days of new I-20 issuance, failure to do so will result in application’s rejection",
     subTasks: [
       {
