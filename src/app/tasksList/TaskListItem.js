@@ -35,28 +35,29 @@ const TaskListItem = (props) => {
     >
       <div className="task-item">
         <div className="task-li-content">
-          <label className="task-label">
+          <label className="task-label" htmlFor={`date-input${task.id}`}>
             <ThemeProvider theme={theme}>
               <CalendarIcon date={new Date(task.date)} options={dateOptions}/>
             </ThemeProvider>
-          <input
-            className="date-input"
-            type="date"
-            min={moment().format("YYYY-MM-DD")}
-            max={endDate.format("YYYY-MM-DD")}
-            value={task.date}
-            onChange={(e) => {
-              e.persist();
+            <input
+              className="date-input"
+              id={`date-input${task.id}`}
+              type="date"
+              min={moment().format("YYYY-MM-DD")}
+              max={endDate.format("YYYY-MM-DD")}
+              value={task.date}
+              onChange={(e) => {
+                e.persist();
 
-              let newTask = {
-                ...task,
-                date: e.target.value
-              };
+                let newTask = {
+                  ...task,
+                  date: e.target.value
+                };
 
-              updateTask(task.id, newTask);
-              props.onChange(newTask);
-            }}
-          />
+                updateTask(task.id, newTask);
+                props.onChange(newTask);
+              }}
+            />
           </label>
           <span className="task-li-title">
             {props.task.title}
