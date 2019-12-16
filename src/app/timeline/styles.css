@@ -9,20 +9,9 @@
   background: white;
   border-radius: 5px;
   box-shadow: 0 1px 2px 0 #ccc;
-  /*margin-right: 50px;*/
-  /*position: relative;*/
+  height: 100%;
+  position: relative;
 }
-
-/*.time-line {*/
-  /*flex: 1 1;*/
-  /*width: 0;*/
-  /*border: 1px solid gray;*/
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*align-items: center;*/
-  /*height: 100%;*/
-  /*position: relative;*/
-/*}*/
 
 .time-line {
   flex: 1 1;
@@ -40,40 +29,24 @@
   align-items: center;
 }
 
-/*.task-circle {*/
-  /*position: absolute;*/
-  /*width: 10px;*/
-  /*height: 10px;*/
-  /*background: #aaddfa;*/
-  /*border-radius: 50%;*/
-  /*border: 1px solid #29648A;*/
-  /*cursor: pointer;*/
-  /*transform: translateY(-50%);*/
-/*}*/
-
 .task-circle {
   width: 10px;
   height: 10px;
-  transform: translate(0, -5px);
+  transform: translate(0, -50%);
   position: absolute;
+  border: 1px solid #29648A;
   background: #29648A;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: black .5px .5px 1px;
+  z-index: 1;
 }
 
-/*.task-circle.selected {*/
-  /*width: 30px;*/
-  /*height: 30px;*/
-  /*background: #2e9cca;*/
-  /*border-radius: 50%;*/
-  /*z-index: 100;*/
-/*}*/
-
 .task-circle.selected {
-  z-index: 10;
-  box-shadow: black 0 0 .5px;
-  animation: grow .15s ease-in-out 0s 1 normal forwards;
+  transition: height .15s, width .15s;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  background-color: #2e9cca;
 }
 
 .months-container {
@@ -117,7 +90,7 @@
 .start-date-label {
   top: 0;
   background: black;
-  border: 0px;
+  border: 0;
   width: 12px;
   height: 3px;
 }
@@ -125,24 +98,7 @@
 .end-date-label {
   bottom: 0;
   background: black;
-  border: 0px;
-  border: 0px;
+  border: 0;
   width: 12px;
   height: 3px;
 }
-
-.on-top {
-  z-index: 100;
-}
-
-@keyframes grow {
-  from {
-    transform: translateY(-5px) scale(1);
-    background-color: rgba(41, 100, 138, 1);
-  }
-  to {
-    transform: translateY(-5px) scale(3);
-    background-color: rgba(79, 154, 203, 1);
-  }
-}
-

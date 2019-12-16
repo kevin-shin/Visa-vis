@@ -9,19 +9,6 @@ const Timeline = (props) => {
   const totDays = endDate.diff(now, 'days');
   let months = {};
 
-  // console.log("Moment: " + moment(now).endOf('month').diff(now)/totDays);
-  // let d1 = now.clone();
-  // let d2 = d1.clone().add(1, "M");
-  // console.log("Total days: " + totDays);
-  //
-  // while(d2.isBefore(endDate)) {
-  //     // let days = moment(d2).diff(d1);
-  //     console.log(d2.get("M"));
-  //     console.log("Month Format: " + moment(d2).format("MMM") + " type: " + typeof(moment(d2).format("MMM")));
-  //     console.log(moment(totDays));
-  //     // d1 = d2;
-  //     d2.add(1, "M")
-  // }
     let currMonthSize = now.clone().endOf("month").diff(now) / endDate.diff(now) * 100;
 
     let d = now.clone();
@@ -65,7 +52,7 @@ const Timeline = (props) => {
               return (
                 <div
                   key={task.id}
-                  className={`task-circle ${task === props.selectedTask ? "selected" : "on-top"}`}
+                  className={`task-circle ${task === props.selectedTask ? "selected" : ""}`}
                   onClick={() => {
                     props.onSelectTask(task);
                   }}
@@ -75,9 +62,8 @@ const Timeline = (props) => {
             }
           )
         }
-        <div className={"time-line"}></div>
+        <div className={"time-line"}/>
       </div>
-      {/*<span className="end-date-label"></span>*/}
     </div>
   )
 };
