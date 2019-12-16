@@ -15,7 +15,13 @@ const App = () => {
 
   useEffect(() => {
     setTasks(getTasks().data);
-  }, []);
+
+    const focused = document.querySelector('.selected');
+
+    if (focused) {
+      focused.scrollIntoView({behavior: 'smooth'});
+    }
+  }, [selectedTask]);
 
   return (
     <div className="body">

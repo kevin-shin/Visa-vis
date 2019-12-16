@@ -37,9 +37,6 @@ const TaskListItem = (props) => {
       <div className="task-item">
         <div className="task-li-content">
           <label className="task-label" htmlFor={`date-input${task.id}`}>
-            <ThemeProvider theme={theme}>
-              <CalendarIcon date={iconDate} options={dateOptions}/>
-            </ThemeProvider>
             <input
               className="date-input"
               id={`date-input${task.id}`}
@@ -55,10 +52,17 @@ const TaskListItem = (props) => {
                   date: e.target.value
                 };
 
+                e.target.classList.add("updated");
+
                 updateTask(task.id, newTask);
                 props.onChange(newTask);
+
+                setTimeout(() => e.target.classList.remove("updated"), 1000);
               }}
             />
+            <ThemeProvider theme={theme}>
+              <CalendarIcon date={iconDate} options={dateOptions}/>
+            </ThemeProvider>
           </label>
           <span className="task-li-title">
             {props.task.title}
