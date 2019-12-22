@@ -1,4 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Visa-vis
+
+Optional Practice Training (OPT) is a benefit for students in F-1 visa status that allows them to apply for employment authorization following their graduation. The "application" refers to the process of applying for OPT approval.
+
+The OPT application can seem like a long and complicated process, because it may require a long time to research and collect the necessary information, and this is particularly hard to do with the pressures of senior year projects and finding a job. Additionally, the OPT application is hard to organize with currently existing productivity apps, because they do not support such a deadline sensitive process, and importing all the necessary information into the platform can be a challenge in and of itself. 
+
+Our goal when developing Visa-vis was to provide a sensible, easy-to-use UI and ease the task of completing this process. Combining the features of a To-Do app, but prepopulated with tabs describing each task and providing helpful links to external resources, Visa-vis seeks to make completing the OPT process as easy as possible, maximizing the user's visibility into the steps of the process, all its requirements and deadlines, and resources to help when required. 
+
+This application was submitted as the final project for Human Computer Interaction, and as such we conducted many user tests to strike at the right design. Read about our design process on our product's website: [Visa-vis](https://francisv6.wixsite.com/visa-vis).
+
+
+###### Disclaimer 
+
+This application was built as an undergraduate project for Human Computer Interaction, and does NOT constitute the description, advertisement, or commercial availability of a real software for personal use. The information provided on the product's website or the application does not constitute legal advice and should not be taken as such. While effort has been made to represent the process as fairly and accurately as possible, the information in the website and application is limited and may contain errors, and is ultimately shaped within the context of the project assignment for the course. 
+
 
 ## Available Scripts
 
@@ -26,43 +40,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
